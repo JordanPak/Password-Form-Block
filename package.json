@@ -1,0 +1,29 @@
+{
+	"name": "password-form-block",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "wp-scripts start ./src/assets",
+		"build": "wp-scripts build ./src/assets",
+		"env": "wp-env",
+		"env:start": "wp-env start",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"test:e2e": "wp-scripts test-e2e --config=tests/e2e/jest.config.js --runInBand",
+		"test:e2e:debug": "wp-scripts --inspect-brk test-e2e --config=tests/e2e/jest.config.js --runInBand",
+		"test:unit": "wp-scripts test-unit-js --config=jest.config.js",
+		"test:unit:watch": "wp-scripts test-unit-js --watch --runInBand --verbose=true",
+		"test:unit:debug": "wp-scripts --inspect-brk test-unit-js --runInBand --no-cache"
+	},
+	"devDependencies": {
+		"@wordpress/e2e-test-utils": "^5.4.1",
+		"@wordpress/env": "^4.1.0",
+		"@wordpress/scripts": "^17.1.0"
+	},
+	"jest": {
+		"globals": {
+			"window": {}
+		}
+	}
+}
