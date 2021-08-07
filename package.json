@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"start": "wp-scripts start ./src/assets",
-		"build": "wp-scripts build ./src/assets",
+		"start": "wp-scripts start ./src/blocks",
+		"build": "wp-scripts build ./src/blocks",
 		"env": "wp-env",
 		"env:start": "wp-env start",
 		"format:js": "wp-scripts format-js",
@@ -17,9 +17,14 @@
 		"test:unit:debug": "wp-scripts --inspect-brk test-unit-js --runInBand --no-cache"
 	},
 	"devDependencies": {
+		"@wordpress/block-editor": "^7.0.0",
+		"@wordpress/blocks": "^11.0.0",
 		"@wordpress/e2e-test-utils": "^5.4.1",
 		"@wordpress/env": "^4.1.0",
-		"@wordpress/scripts": "^17.1.0"
+		"@wordpress/eslint-plugin": "^9.1.0",
+		"@wordpress/i18n": "^4.2.1",
+		"@wordpress/scripts": "^17.1.0",
+		"postcss-custom-properties": "^11.0.0"
 	},
 	"jest": {
 		"globals": {

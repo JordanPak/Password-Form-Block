@@ -11,9 +11,9 @@ module.exports = () => ( {
 	plugins: [
 		require( 'postcss-custom-properties' )(),
 		require( 'autoprefixer' )(/*{ grid: true }*/),
-		require( 'postcss-custom-media' )( {
-			preserve: false,
-			importFrom: [ './src/assets/global/_custom-media.css' ],
-		} ),
+		// require( 'postcss-custom-media' )( {
+		// 	preserve: false,
+		// 	importFrom: [ './src/assets/global/_custom-media.css' ],
+		// } ),
 	],
 } );
