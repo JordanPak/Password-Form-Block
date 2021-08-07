@@ -23,7 +23,9 @@
 		"@wordpress/env": "^4.1.0",
 		"@wordpress/eslint-plugin": "^9.1.0",
 		"@wordpress/i18n": "^4.2.1",
+		"@wordpress/icons": "^5.0.0",
 		"@wordpress/scripts": "^17.1.0",
+		"@wordpress/server-side-render": "^3.0.0",
 		"postcss-custom-properties": "^11.0.0"
 	},
 	"jest": {
