@@ -43,7 +43,6 @@ class Blocks {
 	 */
 	public function __construct() {
 		add_action( 'init', [ $this, 'do_asset_registration' ] );
-		// add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
 
 		// new Block( 'posts' );
 	}
@@ -67,33 +66,20 @@ class Blocks {
 			true
 		);
 
-		// Register editor-specific block styles.
-		wp_register_style(
-			self::EDITOR_ASSET_HANDLE,
-			"$build_url/blocks.css",
-			[],
-			filemtime( "$build_dir/blocks.css" )
-		);
+		// // Register editor-specific block styles.
+		// wp_register_style(
+		// 	self::EDITOR_ASSET_HANDLE,
+		// 	"$build_url/blocks.css",
+		// 	[],
+		// 	filemtime( "$build_dir/blocks.css" )
+		// );
 
-		// Register front-end + editor block styles.
-		wp_register_style(
-			self::ASSET_HANDLE,
-			"$build_url/style-blocks.css",
-			[],
-			filemtime( "$build_dir/style-blocks.css" )
-		);
+		// // Register front-end + editor block styles.
+		// wp_register_style(
+		// 	self::ASSET_HANDLE,
+		// 	"$build_url/style-blocks.css",
+		// 	[],
+		// 	filemtime( "$build_dir/style-blocks.css" )
+		// );
 	}
-
-	// /**
-	//  * Enqueue editor assets
-	//  *
-	//  * @since 1.0.0
-	//  */
-	// public function enqueue_editor_assets() {
-
-	// 	// Always enqueue editor script/styles since sidebar plugins aren't
-	// 	// registered in PHP.
-	// 	wp_enqueue_script( self::EDITOR_ASSET_HANDLE );
-	// 	wp_enqueue_style( self::EDITOR_ASSET_HANDLE );
-	// }
 }
