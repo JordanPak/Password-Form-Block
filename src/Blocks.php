@@ -44,7 +44,7 @@ class Blocks {
 	public function __construct() {
 		add_action( 'init', [ $this, 'do_asset_registration' ] );
 
-		// new Block( 'posts' );
+		new Password_Form();
 	}
 
 	/**
