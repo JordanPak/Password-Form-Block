@@ -52,6 +52,14 @@ class Plugin {
 	public $blocks;
 
 	/**
+	 * Password handler
+	 *
+	 * @since 1.0.0
+	 * @var   Password_Handler
+	 */
+	public $password_handler;
+
+	/**
 	 * Get main plugin instance.
 	 *
 	 * @since 1.0.0
@@ -84,7 +92,8 @@ class Plugin {
 	 * @since 1.0.0
 	 */
 	public function init() {
-		$this->blocks = new Blocks();
+		$this->blocks           = new Blocks();
+		$this->password_handler = new Password_Handler();
 
 		/**
 		 * Hook: password_form_block_loaded
