@@ -65,21 +65,5 @@ class Blocks {
 			$blocks_asset['version'],
 			true
 		);
-
-		// // Register editor-specific block styles.
-		// wp_register_style(
-		// 	self::EDITOR_ASSET_HANDLE,
-		// 	"$build_url/blocks.css",
-		// 	[],
-		// 	filemtime( "$build_dir/blocks.css" )
-		// );
-
-		// // Register front-end + editor block styles.
-		// wp_register_style(
-		// 	self::ASSET_HANDLE,
-		// 	"$build_url/style-blocks.css",
-		// 	[],
-		// 	filemtime( "$build_dir/style-blocks.css" )
-		// );
 	}
 }
