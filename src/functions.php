@@ -113,3 +113,23 @@ function get_block_template( $name, $args = [] ) {
 	get_plugin_template( "block/$name", $args );
 	return ob_get_clean();
 }
+
+
+/**
+ * Is the current request for the block editor?
+ *
+ * There isn't an "official" way to detect whether or not the current view is
+ * the block editor? get_current_screen() comes back as undefined, and even if
+ * you include that file, null is returned.
+ *
+ * @since 1.0.0
+ *
+ * @see https://github.com/WordPress/gutenberg/issues/23810
+ *
+ * @return boolean
+ */
+function is_block_editor() {
+	return defined( 'REST_REQUEST' )
+		&& true === REST_REQUEST
+		&& 'edit' === filter_input( INPUT_GET, 'context', FILTER_SANITIZE_STRING );
+}
