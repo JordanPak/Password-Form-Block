@@ -77,9 +77,9 @@ class Password_Handler {
 	 */
 	public function set_password_required( $required, $post ) {
 
-		if ( $required && has_block( 'password-form-block/password-form', $post ) ) {
-			return false;
-		}
+		return $required && has_block( 'password-form-block/password-form', $post )
+			? false
+			: $required;
 	}
 
 	/**
