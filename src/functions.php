@@ -77,10 +77,10 @@ function do_attrs_class() {
 /**
  * Get a plugin template
  *
+ * @since 1.0.0
+ *
  * @param string $name Template part name (excluding .php).
  * @param array  $args Template arguments (extracted to vars).
- *
- * @since 1.0.0
  */
 function get_plugin_template( $name, $args = [] ) {
 
@@ -103,10 +103,10 @@ function get_plugin_template( $name, $args = [] ) {
 /**
  * Get a dynamic block template
  *
+ * @since 1.0.0
+ *
  * @param string $name Block template part name (excluding .php).
  * @param array  $args Template arguments (extracted to vars).
- *
- * @since 1.0.0
  */
 function get_block_template( $name, $args = [] ) {
 	ob_start();
