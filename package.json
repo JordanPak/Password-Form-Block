@@ -1,0 +1,35 @@
+{
+	"name": "password-form-block",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "wp-scripts start ./src/blocks",
+		"build": "wp-scripts build ./src/blocks",
+		"env": "wp-env",
+		"env:start": "wp-env start",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"test:e2e": "wp-scripts test-e2e --config=tests/e2e/jest.config.js --runInBand",
+		"test:e2e:debug": "wp-scripts --inspect-brk test-e2e --config=tests/e2e/jest.config.js --runInBand",
+		"test:unit": "wp-scripts test-unit-js --config=jest.config.js",
+		"test:unit:watch": "wp-scripts test-unit-js --watch --runInBand --verbose=true",
+		"test:unit:debug": "wp-scripts --inspect-brk test-unit-js --runInBand --no-cache"
+	},
+	"devDependencies": {
+		"@wordpress/block-editor": "^7.0.0",
+		"@wordpress/blocks": "^11.0.0",
+		"@wordpress/e2e-test-utils": "^5.4.1",
+		"@wordpress/env": "^4.1.0",
+		"@wordpress/eslint-plugin": "^9.1.0",
+		"@wordpress/i18n": "^4.2.1",
+		"@wordpress/icons": "^5.0.0",
+		"@wordpress/scripts": "^17.1.0",
+		"@wordpress/server-side-render": "^3.0.0"
+	},
+	"jest": {
+		"globals": {
+			"window": {}
+		}
+	}
+}
